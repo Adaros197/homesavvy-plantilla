@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
 
     <!-- SEO Meta Tags -->
-    <title>Postularse a un Servicio</title>
+    <title>Subir Solcitud de Servicio</title>
     <meta name="description" content="Cartzilla - Multipurpose Bootstrap E-Commerce HTML Template">
     <meta name="keywords" content="bootstrap, online shop, e-commerce, market, multipurpose, product landing, ui kit, light and dark mode, html5, css3, javascript, gallery, slider, touch, creative">
     <meta name="author" content="Createx Studio">
@@ -31,11 +31,14 @@
 
     <!-- Vendor styles -->
     <link rel="stylesheet" href="assets/vendor/choices.js/public/assets/styles/choices.min.css">
+    <link rel="stylesheet" href="assets/vendor/glightbox/dist/css/glightbox.min.css">
 
     <!-- Bootstrap + Theme styles -->
     <link rel="preload" href="assets/css/theme.min.css" as="style">
     <link rel="stylesheet" href="assets/css/theme.min.css" id="theme-styles">
-
+  
+    <link rel="stylesheet" href="assets/css/fonts.css">
+  
     <style>
       :root, [data-bs-theme="light"] {
   --cz-primary: #A2A2F4;
@@ -75,27 +78,13 @@
 
     </style>
 
-    <link rel="stylesheet" href="assets/css/fonts.css">
-
   </head>
 
 
   <!-- Body -->
-  <body style="font-family: nexa;">
+  <body style="font-family: nexa;" >
 
-    <!-- Shopping cart offcanvas (Empty state) -->
-    <div class="offcanvas offcanvas-end pb-sm-2 px-sm-2" id="shoppingCart" tabindex="-1" aria-labelledby="shoppingCartLabel" style="width: 500px">
-      <div class="offcanvas-header py-3 pt-lg-4">
-        <h4 class="offcanvas-title" id="shoppingCartLabel">Shopping cart</h4>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body text-center">
-        <svg class="d-block mx-auto mb-4" xmlns="http://www.w3.org/2000/svg" width="60" viewBox="0 0 29.5 30"><path class="text-body-tertiary" d="M17.8 4c.4 0 .8-.3.8-.8v-2c0-.4-.3-.8-.8-.8-.4 0-.8.3-.8.8v2c0 .4.3.8.8.8zm3.2.6c.4.2.8 0 1-.4l.4-.9c.2-.4 0-.8-.4-1s-.8 0-1 .4l-.4.9c-.2.4 0 .9.4 1zm-7.5-.4c.2.4.6.6 1 .4s.6-.6.4-1l-.4-.9c-.2-.4-.6-.6-1-.4s-.6.6-.4 1l.4.9z" fill="currentColor"/><path class="text-body-emphasis" d="M10.7 24.5c-1.5 0-2.8 1.2-2.8 2.8S9.2 30 10.7 30s2.8-1.2 2.8-2.8-1.2-2.7-2.8-2.7zm0 4c-.7 0-1.2-.6-1.2-1.2s.6-1.2 1.2-1.2 1.2.6 1.2 1.2-.5 1.2-1.2 1.2zm11.1-4c-1.5 0-2.8 1.2-2.8 2.8a2.73 2.73 0 0 0 2.8 2.8 2.73 2.73 0 0 0 2.8-2.8c0-1.6-1.3-2.8-2.8-2.8zm0 4c-.7 0-1.2-.6-1.2-1.2s.6-1.2 1.2-1.2 1.2.6 1.2 1.2-.6 1.2-1.2 1.2zM8.7 18h16c.3 0 .6-.2.7-.5l4-10c.2-.5-.2-1-.7-1H9.3c-.4 0-.8.3-.8.8s.4.7.8.7h18.3l-3.4 8.5H9.3L5.5 1C5.4.7 5.1.5 4.8.5h-4c-.5 0-.8.3-.8.7s.3.8.8.8h3.4l3.7 14.6a3.24 3.24 0 0 0-2.3 3.1C5.5 21.5 7 23 8.7 23h16c.4 0 .8-.3.8-.8s-.3-.8-.8-.8h-16a1.79 1.79 0 0 1-1.8-1.8c0-1 .9-1.6 1.8-1.6z" fill="currentColor"/></svg>
-        <h6 class="mb-2">Your shopping cart is currently empty!</h6>
-        <p class="fs-sm mb-4">Explore our wide range of products and add items to your cart to proceed with your purchase.</p>
-        <a class="btn btn-dark rounded-pill" href="shop-catalog-furniture.html">Continue shopping</a>
-      </div>
-    </div>
+    
 
 
     <!-- Topbar -->
@@ -133,15 +122,15 @@
               
               
               <li class="nav-item me-lg-n2 me-xl-0">
-                <a class="nav-link fs-sm active" href="contact-v2-expert.html">Subir Trabajo</a>
+                <a class="nav-link fs-sm active" href="contact-v2.html">Subir Trabajo</a>
               </li>
               
               <li class="nav-item me-lg-n2 me-xl-0">
-                <a class="nav-link fs-sm" href="historial-experto.html">Historial de Trabajos</a>
+                <a class="nav-link fs-sm" href="#">Historial de Trabajos</a>
               </li>
 
               <li class="nav-item me-lg-n2 me-xl-0">
-                <a class="nav-link fs-sm" href="sol_trabajo_profesional.html">Solicitudes de Servicio</a>
+                <a class="nav-link fs-sm" href="#">Solicitudes de Servicio</a>
               </li>
               
             </ul>
@@ -198,75 +187,67 @@
 
     <!-- Page content -->
     <main class="content-wrapper">
-      <div class="container py-5 mb-2 mb-sm-3 mb-md-4 mb-lg-5 mt-lg-3 mt-xl-4">
 
-        <!-- Page title -->
-        <h1 class="text-center">Postulación a un Servicio</h1>
-        <p class="text-center pb-2 pb-sm-3">Contesta el siguiente formulario para realizar una postulacion a un servicio.</p>
+      <!-- Contact forms -->
+      <section class="bg-body-tertiary pb-1 pb-sm-3 pb-md-4 pb-lg-5" style="margin-top: -110px; padding-top: 110px">
+        <div class="container py-5 mb-xxl-3">
 
+          <!-- Page title -->
+          <h1 class="text-center pb-2 pb-sm-3 mt-lg-3 mt-xl-4 text-primary">Subir Solcitud de Trabajo</h1>
 
-        <!-- Form + Image -->
-        <section class="row row-cols-1 row-cols-md-2 g-0 overflow-hidden rounded-5">
+          
 
-          <!-- Contact form -->
-          <div class="col bg-body-tertiary py-5 px-4 px-xl-5">
-            <form class="needs-validation py-md-2 px-md-1 px-lg-3 mx-lg-3" novalidate>
-              <div class="position-relative mb-4">
-                <label for="name" class="form-label">Nombre</label>
-                <input type="text" class="form-control form-control-lg rounded-pill" id="name" required>
-                <div class="invalid-tooltip bg-transparent z-0 py-0 ps-3">Ingresa tu nombre</div>
+          <!-- Forms wrapper -->
+          <div class="row justify-content-center">
+            <div class="col-md-11 col-lg-9 col-xl-8">
+              <div class="tab-content bg-body rounded-5 py-3 py-sm-4 px-4 px-sm-5">
+                <p class="text-center py-3 mx-auto" style="max-width: 450px">Publica tu oferta de trabajo y muestra tus habilidades al público. Describe los servicios que ofreces, establece tarifas y condiciones, añade fotografías opcionales.</a></p>
+
+                <!-- Customers form -->
+                <div class="tab-pane fade show active" id="customers" role="tabpanel" aria-labelledby="customers-tab">
+                  <form class="needs-validation" novalidate>
+                    <div class="row g-4">
+                      
+                      <div class="col-12 position-relative">
+                        <label for="job-title" class="form-label">Título del trabajo *</label>
+                        <input type="text" class="form-control form-control-lg rounded-pill" id="job-title" required>
+                        <div class="invalid-tooltip bg-transparent z-0 py-0 ps-3">Ingresa el título del trabajo.</div>
+                      </div>
+                  
+                      <div class="col-12 position-relative">
+                        <label for="job-description" class="form-label">Descripción del trabajo *</label>
+                        <textarea class="form-control form-control-lg rounded-6" id="job-description" rows="5" required></textarea>
+                        <div class="invalid-tooltip bg-transparent z-0 py-0 ps-3">Escribe una descripción detallada del trabajo.</div>
+                      </div>
+                  
+                      <div class="col-md-6 position-relative">
+                        <label for="rates-conditions" class="form-label">Tarifas y condiciones *</label>
+                        <input type="text" class="form-control form-control-lg rounded-pill" id="rates-conditions" required placeholder="Ej. $20 por hora, mínimo 2 horas">
+                        <div class="invalid-tooltip bg-transparent z-0 py-0 ps-3">Especifica las tarifas y condiciones.</div>
+                      </div>
+                  
+                      <div class="col-md-6">
+                        <label for="job-photo" class="form-label">Fotografías (opcional)</label>
+                        <input type="file" class="form-control form-control-lg rounded-pill" id="job-photo" accept="image/*" multiple>
+                      </div>
+                  
+                      <div class="col-12 text-center pt-2 pb-3">
+                        <button type="submit" class="btn btn-lg btn-primary rounded-pill">Publicar trabajo</button>
+                      </div>
+                    </div>
+                  </form>
+                  
+                  
+                </div>
+
+                <!-- Retailers form -->
+                
               </div>
-              <div class="position-relative mb-4">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control form-control-lg rounded-pill" id="email" required>
-                <div class="invalid-tooltip bg-transparent z-0 py-0 ps-3">Ingresa tu email</div>
-              </div>
-              <div class="position-relative mb-4">
-                <label for="profesional" class="form-label">Nombre del Cliente</label>
-                <input type="email" class="form-control form-control-lg rounded-pill" id="Profesional" required>
-                <div class="invalid-tooltip bg-transparent z-0 py-0 ps-3">Ingresa el nombre del profesional</div>
-              </div>
-              <div class="position-relative mb-4">
-                <label class="form-label">Especialidad *</label>
-                <select class="form-select form-select-lg rounded-pill" data-select='{
-                  "classNames": {
-                    "containerInner": "form-select form-select-lg rounded-pill"
-                  }
-                }' required>
-                  <option value="">Selecciona la especialidad</option>
-                  <option value="Plomería">Plomería</option>
-                  <option value="Electricidad">Electricidad</option>
-                  <option value="Carpintería">Carpintería</option>
-                  <option value="Pintura">Pintura</option>
-                  <option value="Limpieza">Limpieza</option>
-                  <option value="Jardinería">Jardinería</option>
-                  <option value="Reparación de electrodomésticos">Reparación de electrodomésticos</option>
-                  <option value="Instalación de sistemas de seguridad">Instalación de sistemas de seguridad</option>
-                  <option value="Albañilería">Albañilería</option>
-                  <option value="Decoración de interiores">Decoración de interiores</option>
-                </select>
-                <div class="invalid-tooltip bg-transparent z-0 py-0 ps-3">Selecciona la especialidad que ofreces.</div>
-              </div>
-              
-              <div class="position-relative mb-4">
-                <label for="message" class="form-label">Descripción</label>
-                <textarea class="form-control form-control-lg rounded-6" id="message" rows="5" required></textarea>
-                <div class="invalid-tooltip bg-transparent z-0 py-0 ps-3">Describe el tipo de trabajo que necesitas realizar.</div>
-              </div>
-              <div class="pt-2">
-                <button type="submit" class="btn btn-lg btn-primary rounded-pill">Enviar</button>
-              </div>
-            </form>
+            </div>
           </div>
+        </div>
+      </section>
 
-          <!-- Image -->
-          <div class="col position-relative">
-            <img src="assets/img/carpitenria.avif" class="position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="Image">
-          </div>
-        </section>
-        
-
-        <hr class="my-lg-5">
     </main>
 
 
@@ -317,6 +298,7 @@
           &copy; Todos los derechos reservados. Made by <span class="animate-underline"><a class="animate-target text-white text-decoration-none" href="http://adaros.gerdoc.com/" target="_blank" rel="noreferrer">ADAROS</a></span>
         </p>
       </div>
+    </footer>
 
 
     <!-- Back to top button -->
@@ -334,6 +316,8 @@
 
     <!-- Vendor scripts -->
     <script src="assets/vendor/choices.js/public/assets/scripts/choices.min.js"></script>
+    <script src="assets/vendor/cleave.js/dist/cleave.min.js"></script>
+    <script src="assets/vendor/glightbox/dist/js/glightbox.min.js"></script>
 
     <!-- Bootstrap + Theme scripts -->
     <script src="assets/js/theme.min.js"></script>
